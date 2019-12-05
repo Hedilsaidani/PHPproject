@@ -3,7 +3,7 @@
     class BasesDonnees
     {
         private $dbhost = 'localhost';
-        private $dbname = 'foodordering';
+        private $dbname = 'food ordering';
         private $dbuser = 'root';
         private $dbpwd = '';
         

@@ -53,13 +53,13 @@
                     ?>
                         <tr>
                             <td><?= $produitData['pid'] ?></td>   
-                            <td><?= $produitData['nom'] ?></td>   
-                            <td><?= $produitData['descr'] ?></td>   
-                            <td><?= $produitData['prix'] ?></td>   
-                            <td><img src="<?= $produitData['fichier'] ?>" alt=""></td>
+                            <td><?= $produitData['name'] ?></td>   
+                            <td><?= $produitData['description'] ?></td>   
+                            <td><?= $produitData['price']?></td>   
+                            <td><img src="<?= $produitData['file'] ?>" alt="Image introuvable" width="180" height="150">"</td>
                                
                             <td>
-                                <a href='edit.php?pid=<?= $produitData['pid'] ?>' class="btn btn-outline-warning">Editer</a>&nbsp;&nbsp;
+                                <a href='edit.php?pid=<?= $produitData['pid'] ?>' class="btn btn-outline-warning" >Editer</a>&nbsp;&nbsp;
                                 <a href='delete.php?pid=<?= $produitData['pid'] ?>' class="btn btn-outline-danger">Supprimer</a>
                             </td>
                         </tr>
@@ -69,7 +69,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    </div>
+    </div>...
     <script>
        $(document).ready(function(){
        $("#myInput").on("keyup", function() {

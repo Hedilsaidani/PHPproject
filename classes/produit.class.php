@@ -16,7 +16,7 @@
         public function readAllProduct()
         {
             try {
-                $req = 'SELECT * FROM produits';
+                $req = 'SELECT * FROM product';
                 $result = $this->cnx->prepare($req);
                 $result->execute();
                 return $result;
@@ -28,9 +28,9 @@
         public function showOneProduct($pid)
         {
             try {
-                $req = 'SELECT * FROM produits WHERE pid= :clt_pid';
+                $req = 'SELECT * FROM product WHERE pid= :clt_pid';
                 $result = $this->cnx->prepare($req);
-                $result->bindParam(':clt_pid', $pid);
+                $result->bindParam(':clt_pid',$pid);
                 $result->execute();
                 return $result;
             } catch (PDOException $e) {
@@ -38,15 +38,15 @@
             }
         }
 
-        public function addNewProduct($nom, $description, $prix,$file)
+        public function addNewProduct($nom, $description, $prix,$fichier)
         {
             try {
-                $sql = "INSERT INTO Produits (nom,descr,prix,fichier) VALUES (:clt_nom,:clt_description,:clt_prix,:clt_file)";
+                $sql = "INSERT INTO product (name,description,price,file) VALUES (:clt_nom,:clt_description,:clt_prix,:clt_fichier)";
             $result = $this->cnx->prepare($sql);
             $result->bindparam(":clt_nom", $nom);
             $result->bindparam(":clt_description", $description);
             $result->bindparam(":clt_prix",$prix);
-            $result->bindparam(":clt_file",$file);
+            $result->bindparam(":clt_fichier",$fichier);
             $result->execute();
             return $result;
             } catch (PDOException $ex) {
@@ -54,22 +54,22 @@
             }
         }
 
-        public function updateProduct($pid,$nom, $description, $prix,$file )
+        public function updateProduct($pid,$nom, $description, $prix,$fichier)
         {
             try {
-                $sql = 'UPDATE produits
-                        SET nom = :clt_nom,
-                            descr = :clt_description,
-                            prix = :clt_prix,
-                            fichier = :clt_file,
+                $sql = 'UPDATE product
+                        SET name = :clt_nom,
+                            description = :clt_description,
+                            price = :clt_prix,
+                            file = :clt_fichier,
                         WHERE pid = :clt_pid';
                 $result = $this->cnx->prepare($sql);
                 $result->bindparam(":clt_pid", $pid);
                 $result->bindparam(":clt_nom", $nom);
                 $result->bindparam(":clt_description",$description);
-                $result->bindparam("clt_prix:", $prix);
-                $result->bindparam("clt_file:",$file );
-                $result->execute();
+                $result->bindparam(":clt_prix", $prix);
+                $result->bindparam(":clt_fichier",$fichier );
+                $r = $result->execute();
                 return $result;
 
             } catch (PDOException $exception) {
@@ -79,7 +79,7 @@
         public function deleteProduct($pid)
         {
             try {
-                $sql = 'DELETE FROM produits WHERE pid = :clt_pid';
+                $sql = 'DELETE FROM product WHERE pid = :clt_pid';
                 $result = $this->cnx->prepare($sql);
                 $result->bindparam(":clt_pid", $pid);
                 $result->execute();
