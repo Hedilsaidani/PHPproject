@@ -13,6 +13,28 @@
         <div class="jumbotron text-center">
             <h3>Liste des produits</h3>
         </div>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+         <ul class="navbar-nav">
+            <li class="nav-item">
+                 <a class="nav-link" href="../employeeDashboard.php">EMPLOYEE'S DASHBOARD</a>
+            </li>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">USER PROFILE</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">PRODUCT MANAGMENT</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#"> ORDER MANAGMENT</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#">NOTIFICATIONS</a>
+            </li>
+         </ul>
+        </nav>
+
         <?php if (isset($_GET['notif'])): ?>
             <div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -55,7 +77,7 @@
                             <td><?= $produitData['pid'] ?></td>   
                             <td><?= $produitData['name'] ?></td>   
                             <td><?= $produitData['description'] ?></td>   
-                            <td><?= $produitData['price']?></td>   
+                            <td><?= $produitData['price']?>&nbsp; DT</td>   
                             <td><img src="<?= $produitData['file'] ?>" alt="Image introuvable" width="180" height="150">"</td>
                                
                             <td>
