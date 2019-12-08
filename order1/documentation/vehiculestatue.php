@@ -1,8 +1,7 @@
 <?php
 include 'classes/ordre.class.php';
 $Data = new Ordre ;
-$Data->insert($_GET['oid'],$_GET['type']);
-
+$Data->insertv($_GET['type'],$_GET['oid']);
 header("Location:template.php");
 
 ?>

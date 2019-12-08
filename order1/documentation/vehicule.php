@@ -23,7 +23,7 @@
                 <tr>
                    <th>vid</th>
                    <th>type</th>
-                    <th>     associée </th>
+                    <th>associée </th>
               
                 </tr>
             </thead>
@@ -42,7 +42,7 @@
                             <td><?= $vData['vid'] ?></td> 
                             <td><?= $vData['type'] ?></td>  
                             <td>
-                            <a href='vehiculestatue.php?type=<?= $vData['type'] ?>' class="btn btn-outline-warning">associée</a>
+                            <a href='vehiculestatue.php?type=<?= $vData['type'] ?>?oid=<?= $ordreData['oid']?>' class="btn btn-outline-warning">associée</a>
                             </td>
  
              

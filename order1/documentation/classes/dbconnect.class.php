@@ -1,6 +1,6 @@
 <?php
 
-    class BasesDonnees
+   class BasesDonnees
     {
         private $dbhost = 'localhost';
         private $dbname = 'food_ordring';
@@ -19,4 +19,5 @@
 
             return $this->conn;
         }
-    }           
+    }  
+     

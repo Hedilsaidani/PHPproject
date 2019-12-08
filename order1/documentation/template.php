@@ -108,7 +108,7 @@
             
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vehi">
           associée vehicule
-            </button>
+            </button> </td>
             
                                        
                                         <td>
@@ -116,6 +116,8 @@
                                         
                                         </td>
                                     </tr>
+                                    <?php endforeach  ?>
+
                         </tbody>
                     </table>
                 </div>
@@ -133,13 +135,16 @@
                   </div>
                   <div class="modal-body">
                   <table class="table table-striped">
-
+                  <thead>
                   <tr>
                                <th>vid</th>
                                <th>type</th>
                                 <th>associée </th>
                           
                             </tr>
+                            </thead>
+                            <tbody>
+<tbody>
                   <?php
                                 
                                 $ordre = new Ordre;
@@ -147,14 +152,13 @@
                                 $data = $listOrdre->fetchAll(); 
                                 foreach($data as $Data):
                                 ?>
-                                       <thead>
+                                       
                            
-                        </thead>
                                        <tr>
                                         <td><?= $Data['vid'] ?></td> 
                                         <td><?= $Data['type'] ?></td>  
                                         <td>
-                                        <a href='vehiculestatue.php?type=<?=$Data['type'] ?>?oid=<?= $ordreData['oid'] ?>' class="btn btn-outline-warning">associée</a>
+                                        <a href='vehiculestatue.php?type=<?=$Data['type'] ?>?id=<?= $ordreData['oid'] ?>' class="btn btn-outline-warning">associée</a>
                                         </td>
              
                          
@@ -164,12 +168,12 @@
             
             
                                         <?php endforeach  ?>
+                                        </tbody>
                                         </table>
 
             
                   </div>
                 </div>
-                <?php endforeach  ?>
 
               </div>
             </div>

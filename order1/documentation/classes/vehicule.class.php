@@ -101,11 +101,12 @@
     }
     public function insertv($id,$type){
         try{
-        $req = "UPDATE  SET orders type = :param_type WHERE orders.oid=:id  ";
+        $req = 
+         'UPDATE  SET orders type = :od_param WHERE orders.oid=:id';
         $result = $this->cnx->prepare($req);
         $result->bindParam(":id",$id);
 
-        $result->bindParam(":param_type",$type);
+        $result->bindParam(":od_param",$type);
         $result->execute();
         return $result;
     }
