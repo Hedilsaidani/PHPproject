@@ -5,45 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/css/demo.css" rel="stylesheet" />
     <title>Gestion des produits</title>
 </head>
 <body>
-    <div class="container py-3">
-    
-        <div class="jumbotron text-center">
-            <h3>Liste des produits</h3>
-        </div>
-
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-         <ul class="navbar-nav">
-            <li class="nav-item">
-                 <a class="nav-link" href="../employeeDashboard.php">EMPLOYEE'S DASHBOARD</a>
-            </li>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#">USER PROFILE</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">PRODUCT MANAGMENT</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#"> ORDER MANAGMENT</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#">NOTIFICATIONS</a>
-            </li>
-         </ul>
-        </nav>
-
-        <?php if (isset($_GET['notif'])): ?>
-            <div class="alert alert-success alert-dismissible">
+<div class="wrapper">
+        <div class="sidebar"data-color="purple" >
+            
+            <div class="sidebar-wrapper">
+                    <div class="logo">
+                            <a href="javascript:;" class="simple-text">
+                              EMPLOYEE'S WORK SPACE
+                            </a>
+                    </div>
+                        <ul class="nav">
+                            <li  class="nav-item active">
+                                <a class="nav-link" href="index.php">
+                                    <i class="nc-icon nc-notes"></i>
+                                    <p>PRODUCT MANAGMENT</p>
+                                </a>
+                            </li>
+        
+                            <li>
+                                <a class="nav-link" href="#">
+                                    <i class="nc-icon nc-cart-simple"></i>
+                                    <p>ORDER MANAGMENT</p>
+                                </a>
+                            </li>
+                        </ul>
+                   </div>
+                </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#pablo"> PRODUCTS </a>
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#pablo">
+                                        <span class="no-icon">Log out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            <div class="content">
+               <div class="container">
+               <?php if (isset($_GET['notif'])): ?>
+                <div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <?php
                     if ($_GET['notif'] == 'add') echo 'Produit ajouté avec succés';
                     if ($_GET['notif'] == 'update') echo 'Produit modifié avec succés';
                     if ($_GET['notif'] == 'delete') echo 'Produit supprimé avec succés';
                 ?>
-            </div>
+</div>
         <?php endif ?>
         <br>
         <a href="create.php" class="btn btn-primary">Nouveau produit</a>
@@ -64,6 +90,7 @@
                     <th>Opérations</th>
                 </tr>
             </thead>
+        
             <tbody  id="myTable">
                 <?php
                     include 'classes/produit.class.php';
@@ -90,8 +117,8 @@
         </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    </div>...
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+        </div>...
     <script>
        $(document).ready(function(){
        $("#myInput").on("keyup", function() {
@@ -102,5 +129,27 @@
       });
       });
     </script>
+    </div>
 </body>
+
+<!--   Core JS Files   -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="../text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="../assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+
 </html>
