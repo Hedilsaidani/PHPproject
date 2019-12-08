@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Feliciano - Free Bootstrap 4 Template by Colorlib</title>
+    <title>FooD OrDering</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -30,8 +30,17 @@
 	      <a class="navbar-brand" href="index.html">Food Ordering</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
+        </button>
+        
+        <?php if (isset($_GET['notif'])): ?>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <?php
+                    if ($_GET['notif'] == 'book') echo 'Your table is booked see you sone ';  
+                ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+            </div>
+        <?php endif ?>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a href="#book-table" class="nav-link" id="log"><i class="icon-cutlery">&nbsp;</i>Book A TABLE</a> </li>
@@ -42,7 +51,6 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-    
     <section class="home-slider owl-carousel js-fullheight">
       <div class="slider-item js-fullheight" style="background-image: url(images/caro.jpg);">
       	<div class="overlay"></div>
@@ -229,33 +237,27 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for=""><i class="icon-phone">&nbsp;</i>Phone</label>
-                    <input type="phone" name="phone" class="form-control" placeholder="Phone">
+                    <input type="phone" name="phone" class="form-control" placeholder="Phone" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for=""><i class="icon-calendar">&nbsp;</i>Date</label>
-                    <input type="text" name="date_b"  class="form-control" id="book_date" placeholder="Date">
+                    <input type="text" name="date_b"  class="form-control" id="book_date" placeholder="Date" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for=""><i class="icon-clock-o">&nbsp;</i>Time</label>
-                    <input type="text" name="time_b" class="form-control" id="book_time" placeholder="Time">
+                    <input type="text" name="time_b" class="form-control" id="book_time" placeholder="Time" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for=""><i class="icon-sort-numeric-asc">&nbsp;</i> Person</label>
+                    <label for=""><i>&nbsp;</i> Person</label>
                     <div class="select-wrap one-third">
-                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <select name="person" id="" class="form-control">
-                        <option value="">Person</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option  value="">4+</option>
-                      </select>
+                      <div class="icon"><span ></span></div>
+                      <input type="number" name="person" class="form-control" placeholder="person" required>
                     </div>
                   </div>
                 </div>
@@ -296,7 +298,7 @@
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Feliciano</h2>
+              <h2 class="ftco-heading-2">Food ordering</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

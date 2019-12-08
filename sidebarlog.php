@@ -104,7 +104,14 @@
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
-
+					<?php if (isset($_GET['notif'])): ?>
+                           <div class="alert alert-danger alert-dismissible">
+                               <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                  <?php
+                                if ($_GET['notif'] == 'log') echo 'Wrong Password';
+                              ?>
+                         </div>
+                    <?php endif ?>
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "email is reauired">
 						<span class="label-input100">Email</span>
 						<input class="input100" type="email" name="email" placeholder="Type your email">

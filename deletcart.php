@@ -1,8 +1,8 @@
 <?php
-include './classes.produit.class.php';
+include './classes/produit.class.php';
 
 $del = new produit;
-$req = $del->remove_f_cart();
+$del->remove_f_cart($_GET['id']);
 
-header('location:prodindex.php');
+header('location:prodindex.php?notif=delete');
 ?>

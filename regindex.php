@@ -109,12 +109,20 @@
 				<div class="uk-width-1-1@m">
 					<div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
 						<h3 class="uk-card-title uk-text-center">SIGN UP</h3>
+					 	<?php if (isset($_GET['notif'])): ?>
+                             <div class="alert alert-success alert-dismissible">
+                               <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <?php
+                                   if ($_GET['notif'] == 'reg') echo 'Checkout your confirm Password';
+                                ?>
+                               </div>
+                         <?php endif ?>
 						<form uk-grid action="registre.php" method="POST">
 							<div class="uk-width-1-2">
 							<div class="uk-margin">
 								<div class="uk-inline">
 									<span class="uk-form-icon" uk-icon="icon: user"></span>
-									<input class="uk-input uk-form-medium" type="text" name="name" placeholder="Your Name">
+									<input class="uk-input uk-form-medium" type="text" name="name" placeholder="Your Name" required>
 									<div> <span class="uk-text-danger"><?php if (isset($name_erreur)) echo $name_erreur; ?></span></div>
 								</div>
 							</div>
@@ -123,7 +131,7 @@
 							<div class="uk-margin">
 								<div class="uk-inline">
 									<span class="uk-form-icon" uk-icon="icon: mail"></span>
-									<input class="uk-input uk-form-medium" type="mail" name="email" placeholder="Your Email">	
+									<input class="uk-input uk-form-medium" type="mail" name="email" placeholder="Your Email" required>	
 									<span class="uk-text-danger"> <?php if (isset($email_erreur)) echo $email_erreur; ?></span>
 								</div>
 							</div>
@@ -133,8 +141,8 @@
 							<div class="uk-margin">
 								<div class="uk-inline">
 									<span class="uk-form-icon" uk-icon="icon: lock"></span>
-									<input class="uk-input uk-form-medium" type="password" name="pwd" placeholder="Your Password">	
-									<span class="uk-text-danger"> <?php if (isset($password_erreur)) echo $password_erreur; ?></span>
+									<input class="uk-input uk-form-medium" type="password" name="pwd" placeholder="Your Password" required>	
+									<span class="text-danger"> <?php if (isset($password_erreur)) echo $password_erreur; ?></span>
 								</div>
 							</div>
                          </div>
@@ -143,8 +151,8 @@
 							<div class="uk-margin">
 								<div class="uk-inline">
 									<span class="uk-form-icon" uk-icon="icon: unlock"></span>
-									<input class="uk-input uk-form-medium" type="password" name="confpwd" placeholder="Repeat Your Password">	
-									<span class="uk-text-danger"> <?php if (isset($confpassword_erreur)) echo $confpassword_erreur; ?></span>
+									<input class="uk-input uk-form-medium" type="password" name="confpwd" placeholder="Repeat Your Password" required>	
+									<span class="text-danger"> <?php if (isset($confpassword_erreur)) echo $confpassword_erreur; ?></span>
 								</div>
 							</div>
                          </div>
@@ -153,8 +161,8 @@
 							<div class="uk-margin">
 								<div class="uk-inline  uk-width-1-1 ">
 									<span class="uk-form-icon" uk-icon="icon: phone"></span>
-                                    <input class="uk-input  uk-form-medium" type="number" name="phone" placeholder="Your Phone Number">
-									<span class="uk-text-danger"> <?php if (isset($phone_erreur)) echo $phone_erreur; ?></span>
+                                    <input class="uk-input  uk-form-medium" type="number" name="phone" placeholder="Your Phone Number" required>
+									<span class="text-danger"> <?php if (isset($phone_erreur)) echo $phone_erreur; ?></span>
 								  </div>
 							</div>
 						 </div>
@@ -163,7 +171,7 @@
 							<div class="uk-margin">
 								<div class="uk-inline uk-width-1-1 ">
 									<span class="uk-form-icon" uk-icon="icon: bookmark"></span>
-									<input class="uk-input uk-form-medium" type="text" name="adresse" placeholder="Your address">	
+									<input class="uk-input uk-form-medium" type="text" name="adresse" placeholder="Your address" required>	
 									<span class="uk-text-danger"> <?php if (isset($adresse_erreur)) echo $adresse_erreur; ?></span>
 								</div>
 							</div>

@@ -11,6 +11,6 @@ $person = $_POST['person'];
 $bk = new book_tab;
 $req = $bk->book_table($name,$email,$phone,$date,$time,$person);
 
-header('location:index.php');
+header('location:index.php?notif=book');
 
 ?>

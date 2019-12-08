@@ -50,15 +50,13 @@ if (isset($_POST['submit'])) {
 
 	 //  $_SESSION['name'] =$name;
 	   header('location:sidebarlog.php');
-	 
-	 displayOnly:
-
-	 //$_SESSION['message'] = 'the tow passwords don ';
-	 //header('location:regindex.php');
-
+	  exit();
 	
 	}
+    displayOnly:
 
+    //$_SESSION['message'] = 'the tow passwords don ';
+    header('location:regindex.php?notif=reg');
 //}
 
 

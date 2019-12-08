@@ -25,7 +25,7 @@ echo $total;
 
 $add = new produit();
 $add->addcart($cid,$pid,$qty,$stutus,$ne,$total);
-header('location:prodindex.php');
+header('location:prodindex.php?notif=cart');
 
 
 

@@ -1,0 +1,144 @@
+/*----------------------------------------------------
+@File: Default Styles
+@Author: Rocky Ahmed
+@URL: http://wethemez.com
+Author E-mail: rockybd1995@gmail.com
+
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+---------------------------------------------------- */
+/*=====================================================================
+@Template Name: Builder Construction 
+@Author: Rocky Ahmed
+@Developed By: Rocky Ahmed
+@Developer URL: http://rocky.wethemez.com
+Author E-mail: rockybd1995@gmail.com
+
+@Default Styles
+
+Table of Content:
+01/ Variables
+02/ predefin
+03/ header
+04/ button
+05/ banner
+06/ breadcrumb
+07/ about
+08/ team
+09/ project 
+10/ price 
+11/ team 
+12/ blog 
+13/ video  
+14/ features  
+15/ career  
+16/ contact 
+17/ footer
+
+=====================================================================*/
+/*----------------------------------------------------*/
+/*font Variables*/
+/*Color Variables*/
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css?family=Heebo:300,400,700,900|Roboto:300,400,500,700");
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
+  a:hover, a:focus {
+    text-decoration: none;
+    outline: none; }
+
+.row.m0 {
+  margin: 0px; }
+
+body {
+  line-height: 26px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #777777; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold; }
+
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/* Home Banner Area css
+============================================================================================ */
+.home_banner_area {
+  position: relative;
+  z-index: 1;
+  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  margin-bottom: 200px; }
+  .home_banner_area .box_1620 {
+    min-height: 200px;
+    border-radius: 12px;
+    position: relative;
+    bottom: -200px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3); }
+  .home_banner_area .banner_inner {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    display: flex; }
+    .home_banner_area .banner_inner .banner_content {
+      color: #222222;
+      vertical-align: middle;
+      align-self: center;
+      text-align: left; }
+      .home_banner_area .banner_inner .banner_content .media .d-flex {
+        padding-right: 70px; }
+      .home_banner_area .banner_inner .banner_content .media .media-body {
+        vertical-align: middle;
+        align-self: center; }
+
+/* Personal Profile Area css
+============================================================================================ */
+
+.personal_text h6 {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #222222; }
+.personal_text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #222222; }
+.personal_text h3 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #222222; }
+.personal_text p {
+  font-family: "Roboto", sans-serif;
+  max-width: 540px;
+  color: #777777;
+  margin-bottom: 40px; }
+.personal_text .basic_info li {
+  margin-bottom: 15px; 
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+  

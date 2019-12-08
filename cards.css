@@ -5,7 +5,16 @@
 box-shadow: 3px 8px 8px 3px #e0e0e0;
 animation: 5s infinite;
 }
+#fix{
 
+box-shadow: 0px 2px 2px 0px #e0e0e0;
 
+}
+.ch{
+    font-weight:  500;
+}
 
-
+#back{
+    background-color: #1b1b1b ;
+    padding-top: 40px;
+}

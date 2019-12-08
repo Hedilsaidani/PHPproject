@@ -52,10 +52,10 @@ public function select($email,$password){
             session_start();
             $_SESSION['name'] = $responce['name'];
             $_SESSION['cid'] = $responce['cid'];
-            header('location:prodindex.php');   
+            header('location:prodindex.php?notif=login');   
         }
     }else{
-         /* header('location:sidebarlog.php');*/
+          header('location:sidebarlog.php?notif=log');
     }
 }
 
